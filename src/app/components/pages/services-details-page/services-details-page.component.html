@@ -1,0 +1,318 @@
+<!-- Start Page Title Area -->
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <h1 *ngFor="let Title of pageTitle;">{{Title.pageTitle}}</h1>
+        </div>
+    </div>
+</div>
+<!-- End Page Title Area -->
+
+<!-- Start Services Details Area -->
+<div class="services-details-area ptb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="services-details-content" *ngFor="let Content of servicesDetailsContent;">
+                    <h2>{{Content.title}}</h2>
+                    <p *ngFor="let List of Content.paragraphList">{{List.paragraph}}</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="services-details-video" *ngFor="let Content of servicesDetailsVideo;">
+                    <iframe src="https://player.vimeo.com/video/176909027" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <a routerLink="/{{Content.buttonLink}}" class="default-btn">{{Content.buttonText}}<i class='bx bx-paper-plane'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="services-area pt-100 pb-70 bg-F9FAFB">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">BENEFITS</span>
+            <h2>We Offer Professional Security Solutions For Business</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services-box">
+                    <div class="icon">
+                        <i class="flaticon-eye-mask"></i>
+                    </div>
+                    <h3>Extensive Threat Visibility</h3>
+                    <p>Lorem ipsum dolor sit amet,  adipiscing elit, sed do eiusmod tempor incididunt ut labore. Quis ipsum suspendisse.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services-box">
+                    <div class="icon">
+                        <i class="flaticon-thinking"></i>
+                    </div>
+                    <h3>Continual Detection</h3>
+                    <p>Lorem ipsum dolor sit amet,  adipiscing elit, sed do eiusmod tempor incididunt ut labore. Quis ipsum suspendisse.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services-box">
+                    <div class="icon">
+                        <i class="flaticon-darts"></i>
+                    </div>
+                    <h3>Eases The Pressure</h3>
+                    <p>Lorem ipsum dolor sit amet,  adipiscing elit, sed do eiusmod tempor incididunt ut labore. Quis ipsum suspendisse.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services-box">
+                    <div class="icon">
+                        <i class="flaticon-antivirus"></i>
+                    </div>
+                    <h3>Network Assessment</h3>
+                    <p>Lorem ipsum dolor sit amet,  adipiscing elit, sed do eiusmod tempor incididunt ut labore. Quis ipsum suspendisse.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services-box">
+                    <div class="icon">
+                        <i class="flaticon-keywords"></i>
+                    </div>
+                    <h3>Host & End Point</h3>
+                    <p>Lorem ipsum dolor sit amet,  adipiscing elit, sed do eiusmod tempor incididunt ut labore. Quis ipsum suspendisse.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services-box">
+                    <div class="icon">
+                        <i class="flaticon-protection"></i>
+                    </div>
+                    <h3>Cloud & Virtualization</h3>
+                    <p>Lorem ipsum dolor sit amet,  adipiscing elit, sed do eiusmod tempor incididunt ut labore. Quis ipsum suspendisse.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overview-area services-details-overview ptb-100">
+    <div class="container">
+        <div class="overview-box row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="overview-image">
+                    <img src="assets/img/overview/overview-img1.png" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="overview-content">
+                    <h2>Establishing Your Cybersecurity Vision</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Meet Our Leadership Preparing For Your Business Success.</p>
+                    <a routerLink="/services-details" class="link-btn">REQUEST A PROPOSAL <i class='bx bx-chevron-right'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="overview-box row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="overview-image">
+                    <img src="assets/img/overview/overview-img2.png" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="overview-content">
+                    <h2>Determining and Prioritizing Cybersecurity Initiatives</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Meet Our Leadership Preparing For Your Business Success.</p>
+                    <a routerLink="/services-details" class="link-btn">REQUEST A PROPOSAL <i class='bx bx-chevron-right'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="overview-box row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="overview-image">
+                    <img src="assets/img/overview/overview-img3.png" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="overview-content">
+                    <h2>Reducing Risk with Continual Security Improvements</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Meet Our Leadership Preparing For Your Business Success.</p>
+                    <a routerLink="/services-details" class="link-btn">REQUEST A PROPOSAL <i class='bx bx-chevron-right'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="features-area pt-100 bg-F9FAFB">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">FEATURES</span>
+            <h2>A Turnkey Solution For Threat Detection</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-sm-6 col-md-6">
+                <div class="features-box bg-white">
+                    <div class="icon">
+                        <i class="flaticon-video-conference"></i>
+                    </div>
+                    <h3>Security Advisory</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-md-6">
+                <div class="features-box bg-white">
+                    <div class="icon">
+                        <i class="flaticon-call-center-agent"></i>
+                    </div>
+                    <h3>Technical Assurance</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-md-6">
+                <div class="features-box bg-white">
+                    <div class="icon">
+                        <i class="flaticon-cyber-security"></i>
+                    </div>
+                    <h3>Managed Services</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-md-6">
+                <div class="features-box bg-white">
+                    <div class="icon">
+                        <i class="flaticon-hacker"></i>
+                    </div>
+                    <h3>Remote Workers</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-md-6">
+                <div class="features-box bg-white">
+                    <div class="icon">
+                        <i class="flaticon-planning"></i>
+                    </div>
+                    <h3>High Fidelity Telemetry</h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-md-6">
+                <div class="features-box bg-white">
+                    <div class="icon">
+                        <i class="flaticon-cloud-computing"></i>
+                    </div>
+                    <h3>Scenario Testing</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-why-choose-us></app-why-choose-us>
+
+<app-funfacts></app-funfacts>
+
+<div class="faq-area ptb-100 bg-F9FAFB">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">FAQ's</span>
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-accordion accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Is Naxai Hiring?
+                    </button>
+                </div>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                        <ul>
+                            <li>a console</li>
+                            <li>Two Joy-Con controllers that are detachable</li>
+                            <li>A grip that enables you to combine them into a single gamepad for play on the TV</li>
+                            <li>Two straps for turning the Joy-Cons into individual controllers</li>
+                            <li>A dock which you can use to connect your console to the television for traditional gameplay</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What geographic location does Naxai serve?
+                    </button>
+                </div>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                        <ul>
+                            <li>a console</li>
+                            <li>Two Joy-Con controllers that are detachable</li>
+                            <li>A grip that enables you to combine them into a single gamepad for play on the TV</li>
+                            <li>Two straps for turning the Joy-Cons into individual controllers</li>
+                            <li>A dock which you can use to connect your console to the television for traditional gameplay</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Why should I use Naxai?
+                    </button>
+                </div>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.</p>
+                        <p>Tunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        What types of applications can be tested?
+                    </button>
+                </div>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>a console</li>
+                            <li>Two Joy-Con controllers that are detachable</li>
+                            <li>A grip that enables you to combine them into a single gamepad for play on the TV</li>
+                            <li>Two straps for turning the Joy-Cons into individual controllers</li>
+                            <li>A dock which you can use to connect your console to the television for traditional gameplay</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        What is a Naxai Phishing Campaign?
+                    </button>
+                </div>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="partner-area bg-F9FAFB pb-100">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">EXPERTISE</span>
+            <h2>Our Security Qualifications</h2>
+        </div>
+        <app-partner></app-partner>
+    </div>
+</div>
+
+<app-testimonials></app-testimonials>
+
+<app-lets-talk></app-lets-talk>
+
+<app-case-studies></app-case-studies>
+<!-- End Services Details Area -->

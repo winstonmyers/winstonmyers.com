@@ -1,0 +1,55 @@
+<!-- Start Blog Area -->
+<div class="blog-area pt-70 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">LATEST NEWS</span>
+            <h2>Our Latest Insights Are On Top <br>All Times</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="single-blog-post" *ngFor="let Content of singleBlogPost;">
+                    <div class="post-image">
+                        <a routerLink="/{{Content.detailsLink}}">
+                            <img [src]="Content.mainImage" alt="image">
+                        </a>
+                    </div>
+                    <div class="post-content">
+                        <ul class="meta">
+                            <li><i class='bx bx-purchase-tag'></i> {{Content.tag}}</li>
+                            <li><i class='bx bx-user-circle'></i> {{Content.authorName}}</li>
+                        </ul>
+                        <h3><a routerLink="/{{Content.detailsLink}}">{{Content.title}}</a></h3>
+                        <p>{{Content.paragraph}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="blog-post-list">
+                    <div class="single-blog-item" *ngFor="let Content of singleBlogItem;">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="post-image" style="background-image: url({{Content.mainImage}});">
+                                    <img [src]="Content.mainImage" alt="image">
+                                    <a routerLink="/{{Content.detailsLink}}" class="link-btn"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="post-content">
+                                    <ul class="meta">
+                                        <li><i class='bx bx-purchase-tag'></i> {{Content.tag}}</li>
+                                        <li><i class='bx bx-user-circle'></i> {{Content.authorName}}</li>
+                                    </ul>
+                                    <h3><a routerLink="/{{Content.detailsLink}}">{{Content.title}}</a></h3>
+                                    <p>{{Content.paragraph}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Blog Area -->

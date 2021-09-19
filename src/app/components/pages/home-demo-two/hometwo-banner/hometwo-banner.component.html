@@ -1,0 +1,32 @@
+<!-- Start Home Area -->
+<div class="home-area">
+    <div class="container-fluid">
+        <div class="home-slides">
+            <owl-carousel-o [options]="homeSlides">
+                <ng-template carouselSlide *ngFor="let Content of homeInnerContent;">
+                    <div class="home-inner">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="home-content">
+                                    <h1>{{Content.title}}</h1>
+                                    <p>{{Content.paragraph}}</p>
+                                    <div class="btn-box">
+                                        <a routerLink="/{{Button.buttonLink}}" class="default-btn" *ngFor="let Button of Content.buttonBox">{{Button.buttonText}}<i class='{{Button.buttonIcon}}'></i></a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="col-lg-6 col-md-12">
+                                <div class="home-image">
+                                    <img [src]="Content.img" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+    <img [src]="Image.img" alt="award" class="award" *ngFor="let Image of awardImage;">
+</div>
+<!-- End Home Area -->

@@ -1,0 +1,52 @@
+<!-- Start Top Header Area -->
+<div class="top-header-area {{topHeaderClass}}">
+    <div class="container-fluid {{containerClass}}">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <ul class="top-header-contact-info">
+                    <li><a href="tel:+44458895456"><i class='bx bx-phone-call'></i> +44 458 895 456</a></li>
+                    <li><a href="mailto:hello@naxai.com"><i class='bx bx-envelope'></i> hello@naxai.com</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="top-header-right">
+                    <ul class="d-flex align-items-center justify-content-end">
+                        <li>
+                            <div class="dropdown language-switcher d-inline-block" [class.active]="switcherClassApplied">
+                                <button class="dropdown-toggle" type="button" (click)="switcherToggleClass()">
+                                    <img src="assets/img/flag/us.jpg" alt="image">
+                                    <span>Eng <i class='bx bx-chevron-down'></i></span>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item d-flex align-items-center">
+                                        <img src="assets/img/flag/germany.jpg" alt="flag">
+                                        <span>Ger</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item d-flex align-items-center">
+                                        <img src="assets/img/flag/france.jpg" alt="flag">
+                                        <span>Fre</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item d-flex align-items-center">
+                                        <img src="assets/img/flag/spain.jpg" alt="flag">
+                                        <span>Spa</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item d-flex align-items-center">
+                                        <img src="assets/img/flag/russia.jpg" alt="flag">
+                                        <span>Rus</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item d-flex align-items-center">
+                                        <img src="assets/img/flag/italy.jpg" alt="flag">
+                                        <span>Ita</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a routerLink="/sign-in"><i class='bx bx-log-in'></i> Sign In</a></li>
+                        <li><a routerLink="/sign-up"><i class='bx bx-user'></i> Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Top Header Area -->

@@ -1,0 +1,29 @@
+<!-- Start Services Area -->
+<div class="services-area pt-100 bg-image">
+    <div class="container">
+        <div class="section-title" *ngFor="let Content of sectionTitle;">
+            <span class="sub-title">{{Content.subTitle}}</span>
+            <h2>{{Content.title}}</h2>
+            <p>{{Content.paragraph}}</p>
+        </div>
+
+        <div class="services-slides">
+            <owl-carousel-o [options]="servicesSlides">
+                <ng-template carouselSlide *ngFor="let Content of singleServicesBox;">
+                    <div class="single-services-box">
+                        <div class="icon">
+                            <i class="{{Content.icon}}"></i>
+                        </div>
+                        <h3><a routerLink="/{{Content.detailsLink}}">{{Content.title}}</a></h3>
+                        <p>{{Content.paragraph}}</p>
+                        <a routerLink="/{{Content.detailsLink}}" class="link-btn">{{Content.btnText}}<i class='bx bx-chevron-right'></i></a>
+                        <div class="back-icon">
+                            <i class="{{Content.icon}}"></i>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>
+<!-- End Services Area -->

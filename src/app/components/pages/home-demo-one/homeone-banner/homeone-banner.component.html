@@ -1,0 +1,13 @@
+<!-- Start Main Banner Area -->
+<div class="main-banner-area" style="background-image: url({{Content.bgImage}});" *ngFor="let Content of mainBannerContent;">
+    <div class="container-fluid">
+        <div class="main-banner-content">
+            <h1>{{Content.title}}</h1>
+            <p>{{Content.paragraph}}</p>
+            <div class="btn-box">
+                <a routerLink="/{{Button.buttonLink}}" class="default-btn" *ngFor="let Button of Content.buttonBox">{{Button.buttonText}}<i class='{{Button.buttonIcon}}'></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Main Banner Area -->

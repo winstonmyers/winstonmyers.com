@@ -1,0 +1,11 @@
+<!-- Start Lets Talk Area -->
+<div class="{{letsTalkClass}}">
+    <div class="container">
+        <div class="lets-talk-content" *ngFor="let Content of letsTalkContent;">
+            <h2>{{Content.title}}</h2>
+            <p>{{Content.paragraph}}</p>
+            <a routerLink="/{{Content.buttonLink}}" class="default-btn"><i class='bx bx-file'></i>{{Content.buttonText}}</a>
+        </div>
+    </div>
+</div>
+<!-- End Lets Talk Area -->

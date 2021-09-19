@@ -1,0 +1,132 @@
+<!-- Start Page Title Area -->
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <h1 *ngFor="let Title of pageTitle;">{{Title.pageTitle}}</h1>
+        </div>
+    </div>
+</div>
+<!-- End Page Title Area -->
+
+<!-- Start Blog Area -->
+<div class="blog-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6" *ngFor="let Content of singleBlogPost | paginate: { itemsPerPage: 4, currentPage: blogRightSidebar }">
+                        <div class="single-blog-post without-bg-color">
+                            <div class="post-image">
+                                <a routerLink="/{{Content.detailsLink}}">
+                                    <img [src]="Content.mainImage" alt="image">
+                                </a>
+                            </div>
+                            <div class="post-content">
+                                <ul class="meta">
+                                    <li><i class='bx bx-purchase-tag'></i> {{Content.tag}}</li>
+                                    <li><i class='bx bx-user-circle'></i> {{Content.authorName}}</li>
+                                </ul>
+                                <h3><a routerLink="/{{Content.detailsLink}}">{{Content.title}}</a></h3>
+                                <p>{{Content.paragraph}}</p>
+                                <a routerLink="/{{Content.detailsLink}}" class="link-btn">{{Content.linkText}}<i class='bx bx-chevron-right'></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="pagination-area text-center">
+                            <pagination-controls previousLabel="" nextLabel="" (pageChange)="blogRightSidebar = $event"></pagination-controls>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <aside class="widget-area">
+                    <div class="widget widget_search">
+                        <form class="search-form">
+                            <label><input type="search" class="search-field" placeholder="Search..."></label>
+                            <button type="submit"><i class="bx bx-search-alt"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="widget widget_naxai_posts_thumb">
+                        <h3 class="widget-title">Popular Posts</h3>
+
+                        <article class="item">
+                            <a routerLink="/blog-details" class="thumb"><span class="fullimage cover bg1" role="img"></span></a>
+                            <div class="info">
+                                <h4 class="title usmall"><a routerLink="/blog-details">IoT cyber security: Are we finally turning the corner?</a></h4>
+                                <ul class="meta">
+                                    <li><i class="bx bx-purchase-tag"></i> <a routerLink="/blog-grid">IoT</a></li>
+                                    <li><i class="bx bx-time"></i> 5 min read</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="item">
+                            <a routerLink="/blog-details" class="thumb"><span class="fullimage cover bg2" role="img"></span></a>
+                            <div class="info">
+                                <h4 class="title usmall"><a routerLink="/blog-details">Cybersecurity careers: Which one is right for you?</a></h4>
+                                <ul class="meta">
+                                    <li><i class="bx bx-purchase-tag"></i> <a routerLink="/blog-grid">Careers</a></li>
+                                    <li><i class="bx bx-time"></i> 5 min read</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="item">
+                            <a routerLink="/blog-details" class="thumb"><span class="fullimage cover bg3" role="img"></span></a>
+                            <div class="info">
+                                <h4 class="title usmall"><a routerLink="/blog-details">5 things you can do to secure your home office</a></h4>
+                                <ul class="meta">
+                                    <li><i class="bx bx-purchase-tag"></i> <a routerLink="/blog-grid">Office</a></li>
+                                    <li><i class="bx bx-time"></i> 5 min read</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="item">
+                            <a routerLink="/blog-details" class="thumb"><span class="fullimage cover bg4" role="img"></span></a>
+                            <div class="info">
+                                <h4 class="title usmall"><a routerLink="/blog-details">Election (in)security: What you may have missed</a></h4>
+                                <ul class="meta">
+                                    <li><i class="bx bx-purchase-tag"></i> <a routerLink="/blog-grid">Security</a></li>
+                                    <li><i class="bx bx-time"></i> 5 min read</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="widget widget_categories">
+                        <h3 class="widget-title">Popular Categories</h3>
+
+                        <ul>
+                            <li><a routerLink="/blog-grid"><i class='bx bxs-virus'></i> Cyber</a></li>
+                            <li><a routerLink="/blog-grid"><i class='bx bx-lock-open'></i> Security</a></li>
+                            <li><a routerLink="/blog-grid"><i class='bx bx-mobile-alt'></i> Phone</a></li>
+                            <li><a routerLink="/blog-grid"><i class='bx bx-mask'></i> IoT</a></li>
+                            <li><a routerLink="/blog-grid"><i class='bx bx-show'></i> Password</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="widget widget_tag_cloud">
+                        <h3 class="widget-title">Tags</h3>
+
+                        <div class="tagcloud">
+                            <a routerLink="/blog-grid">Cyber <span class="tag-link-count"> (3)</span></a>
+                            <a routerLink="/blog-grid">Security <span class="tag-link-count"> (3)</span></a>
+                            <a routerLink="/blog-grid">IoT <span class="tag-link-count"> (2)</span></a>
+                            <a routerLink="/blog-grid">Phone <span class="tag-link-count"> (2)</span></a>
+                            <a routerLink="/blog-grid">Password <span class="tag-link-count"> (1)</span></a>
+                            <a routerLink="/blog-grid">Office <span class="tag-link-count"> (1)</span></a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Blog Area -->
+
+<app-lets-talk></app-lets-talk>

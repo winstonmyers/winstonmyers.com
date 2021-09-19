@@ -1,0 +1,31 @@
+<!-- Start Blog Area -->
+<div class="blog-area pt-70 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">LATEST NEWS</span>
+            <h2>Our Latest Blog</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6" *ngFor="let Content of singleBlogPost;">
+                <div class="single-blog-post without-bg-color">
+                    <div class="post-image">
+                        <a routerLink="/{{Content.detailsLink}}">
+                            <img [src]="Content.mainImage" alt="image">
+                        </a>
+                    </div>
+                    <div class="post-content">
+                        <ul class="meta">
+                            <li><i class='bx bx-purchase-tag'></i> {{Content.tag}}</li>
+                            <li><i class='bx bx-user-circle'></i> {{Content.authorName}}</li>
+                        </ul>
+                        <h3><a routerLink="/{{Content.detailsLink}}">{{Content.title}}</a></h3>
+                        <p>{{Content.paragraph}}</p>
+                        <a routerLink="/{{Content.detailsLink}}" class="link-btn">{{Content.linkText}}<i class='bx bx-chevron-right'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Blog Area -->

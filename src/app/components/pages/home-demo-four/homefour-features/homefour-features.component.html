@@ -1,0 +1,21 @@
+<!-- Start Overview Area -->
+<div class="overview-area ptb-100">
+    <div class="container">
+        <div class="overview-box row align-items-center" *ngFor="let Content of overviewBox;">
+            <div class="col-lg-6 col-md-12">
+                <div class="overview-image">
+                    <img [src]="Content.img" alt="image">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="overview-content">
+                    <h2>{{Content.title}}</h2>
+                    <p *ngFor="let List of Content.paragraphList">{{List.paragraph}}</p>
+                    <a routerLink="/{{Content.buttonLink}}" class="link-btn">{{Content.buttonText}}<i class='bx bx-chevron-right'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Overview Area -->

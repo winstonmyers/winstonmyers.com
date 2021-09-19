@@ -1,0 +1,24 @@
+<!-- Start Case Studies Area -->
+<div class="case-studies-area pt-100 pb-70 bg-F9FAFB">
+    <div class="container">
+        <div class="section-title" *ngFor="let Content of sectionTitle;">
+            <span class="sub-title">{{Content.subTitle}}</span>
+            <h2>{{Content.title}}</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6" *ngFor="let Content of singleCaseStudiesBox;">
+                <div class="single-case-studies-box">
+                    <img [src]="Content.img" alt="image">
+                    <div class="content">
+                        <span><i class='bx bx-calendar-star'></i> {{Content.date}}</span>
+                        <h3>{{Content.title}}</h3>
+                        <a routerLink="/{{Content.link}}" class="read-more-btn">{{Content.linkText}}<i class='bx bx-chevron-right'></i></a>
+                    </div>
+                    <a routerLink="/{{Content.link}}" class="link-btn"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Case Studies Area -->

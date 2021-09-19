@@ -1,0 +1,11 @@
+<div class="partner-slides">
+    <owl-carousel-o [options]="partnerSlides">
+        <ng-template carouselSlide *ngFor="let Image of partnerItem;">
+            <div class="partner-item">
+                <a href="#" class="d-inline-block" target="_blank">
+                    <img [src]="Image.img" alt="image">
+                </a>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>

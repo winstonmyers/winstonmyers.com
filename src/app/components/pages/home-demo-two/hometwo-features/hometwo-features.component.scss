@@ -1,0 +1,121 @@
+.features-box {
+    border-radius: 5px;
+    text-align: center;
+    padding: 35px 25px;
+    margin-bottom: 30px;
+    border: 1px solid #e9eef3;
+
+    .icon {
+        z-index: 1;
+        line-height: 1;
+        font-size: 60px;
+        position: relative;
+        margin-bottom: 25px;
+        display: inline-block;
+        color: var(--mainColor);
+    }
+    h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    .link-btn {
+        display: inline-block;
+        position: relative;
+        margin-top: 5px;
+        padding-right: 20px;
+        color: var(--mainColor);
+        font: {
+            size: 15px;
+            weight: 500;
+        };
+        i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 22px;
+        }
+        &:hover {
+            color: var(--blackColor);
+            padding-right: 25px;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .features-box {
+        padding: 20px 15px;
+
+        .icon {
+            font-size: 40px;
+        }
+        h3 {
+            font-size: 17px;
+        }
+        .link-btn {
+            margin-top: 0;
+            font-size: 13px;
+
+            i {
+                font-size: 20px;
+                margin-top: -.3px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .features-box {
+        padding: 25px 20px;
+
+        .icon {
+            font-size: 50px;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        .link-btn {
+            font-size: 14px;
+
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .features-box {
+        h3 {
+            font-size: 20px;
+        }
+    }
+    
+}
+
+/* Min width 1200px to Max width 1355px */
+@media only screen and (min-width: 1200px) and (max-width: 1355px) {
+
+    .features-box {
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+}
+
+/* Min width 1356px to Max width 1535px */
+@media only screen and (min-width: 1356px) and (max-width: 1535px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

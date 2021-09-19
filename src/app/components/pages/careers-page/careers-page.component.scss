@@ -1,0 +1,140 @@
+.single-jobs-item {
+    box-shadow: 0 2px 48px 0 rgba(0,0,0,.08);
+    background-color: var(--whiteColor);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 40px;
+
+    h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    .link-btn {
+        position: relative;
+        padding-right: 20px;
+        display: inline-block;
+        color: var(--mainColor);
+        margin-top: 5px;
+        font: {
+            size: 15px;
+            weight: 500;
+        };
+        i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 22px;
+        }
+        &:hover {
+            color: var(--blackColor);
+            padding-right: 25px;
+        }
+    }
+}
+.careers-details-content {
+    h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+
+        &:not(:first-child) {
+            margin-top: 25px;
+        }
+    }
+    strong {
+        color: var(--blackColor) !important;
+    }
+    ul {
+        li {
+            color: var(--optionalColor);
+            margin-bottom: 12px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .single-jobs-item {
+        padding: 20px;
+
+        h3 {
+            font-size: 17px;
+        }
+        .link-btn {
+            margin-top: 0;
+            font-size: 13px;
+
+            i {
+                font-size: 20px;
+                margin-top: -.3px;
+            }
+        }
+    }
+    .careers-details-content {
+        h3 {
+            font-size: 17px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .single-jobs-item {
+        padding: 20px;
+
+        h3 {
+            font-size: 18px;
+        }
+        .link-btn {
+            font-size: 14px;
+
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+    .careers-details-content {
+        h3 {
+            font-size: 18px;
+        }
+    }
+    
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .single-jobs-item {
+        padding: 25px;
+
+        h3 {
+            font-size: 20px;
+        }
+        .link-btn {
+            font-size: 14px;
+
+            i {
+                top: -1px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1355px */
+@media only screen and (min-width: 1200px) and (max-width: 1355px) {}
+
+/* Min width 1356px to Max width 1535px */
+@media only screen and (min-width: 1356px) and (max-width: 1535px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

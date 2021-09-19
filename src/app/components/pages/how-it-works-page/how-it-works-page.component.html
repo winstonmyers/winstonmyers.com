@@ -1,0 +1,32 @@
+<!-- Start Page Title Area -->
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <h1 *ngFor="let Title of pageTitle;">{{Title.pageTitle}}</h1>
+        </div>
+    </div>
+</div>
+<!-- End Page Title Area -->
+
+<!-- Start How It Works Area -->
+<div class="how-it-works-area ptb-100">
+    <div class="container">
+        <div class="main-timeline">
+            <div class="timeline" *ngFor="let Content of timelineContent;">
+                <div class="icon"></div>
+                <div class="date-content">
+                    <div class="date-outer">
+                        <span class="date">{{Content.number}}</span>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <h5 class="title">{{Content.title}}</h5>
+                    <p class="description">{{Content.paragraph}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End How It Works Area -->
+
+<app-lets-talk></app-lets-talk>

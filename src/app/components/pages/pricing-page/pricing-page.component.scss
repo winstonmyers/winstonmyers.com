@@ -1,0 +1,259 @@
+.pricing-table {
+    table {
+        margin-bottom: 0;
+
+        thead {
+            th {
+                text-align: center;
+                border: {
+                    bottom: none;
+                    top: none;
+                    right: 1px solid #eeeeee;
+                };
+                padding: {
+                    top: 20px;
+                    left: 20px;
+                    right: 20px;
+                    bottom: 20px;
+                };
+                h3 {
+                    background-color: var(--blackColor);
+                    color: var(--whiteColor);
+                    font-size: 22px;
+                    margin: {
+                        top: -20px;
+                        left: -20px;
+                        right: -20px;
+                        bottom: 20px;
+                    };
+                    padding: {
+                        left: 20px;
+                        right: 20px;
+                        top: 15px;
+                        bottom: 15px;
+                    };
+                }
+                p {
+                    margin-bottom: 12px;
+                    line-height: initial;
+                }
+                span {
+                    line-height: 1;
+                    font-size: 35px;
+
+                    sup {
+                        color: var(--optionalColor);
+                        font-size: 50%;
+                        top: -1em;
+                    }
+                }
+                .default-btn {
+                    width: 100%;
+                    display: block;
+                    margin-top: 15px;
+                    padding: {
+                        left: 35px;
+                        right: 35px;
+                    };
+                }
+            }
+        }
+        tbody {
+            tr {
+                border: none;
+
+                td {
+                    font-size: 18px;
+                    box-shadow: unset;
+                    text-align: center;
+                    vertical-align: middle;
+                    color: var(--optionalColor);
+                    background-color: transparent;
+                    border: {
+                        top: none;
+                        bottom: none;
+                        right: 1px solid #eeeeee;
+                    };
+                    padding: {
+                        top: 20px;
+                        left: 20px;
+                        right: 20px;
+                        bottom: 20px;
+                    };
+                    &:first-child {
+                        text-align: left;
+                    }
+                    i {
+                        line-height: 1;
+                        font-size: 22px;
+
+                        &.bxs-badge-check {
+                            color: green;
+                        }
+                        &.bxs-x-circle {
+                            color: red;
+                        }
+                    }
+                }
+                &:nth-child(odd) {
+                    background-color: #F5F7F8;
+                }
+                &:last-child {
+                    td {
+                        border-bottom: 1px solid #eeeeee;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .pricing-table {
+        table {
+            thead {
+                th {
+                    white-space: nowrap;
+                    padding: {
+                        top: 15px;
+                        left: 15px;
+                        right: 15px;
+                        bottom: 15px;
+                    };
+                    h3 {
+                        font-size: 17px;
+                        margin: {
+                            top: -15px;
+                            left: -15px;
+                            right: -15px;
+                            bottom: 15px;
+                        };
+                        padding: {
+                            left: 15px;
+                            right: 15px;
+                            top: 12px;
+                            bottom: 12px;
+                        };
+                    }
+                    span {
+                        font-size: 24px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        white-space: nowrap;
+                        font-size: 14px;
+                        padding: {
+                            top: 15px;
+                            left: 15px;
+                            right: 15px;
+                            bottom: 15px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .pricing-table {
+        table {
+            thead th {
+                white-space: nowrap;
+                padding: {
+                    top: 15px;
+                    left: 15px;
+                    right: 15px;
+                    bottom: 15px;
+                };
+                h3 {
+                    font-size: 18px;
+                    margin: {
+                        top: -15px;
+                        left: -15px;
+                        right: -15px;
+                        bottom: 15px;
+                    };
+                    padding: {
+                        left: 15px;
+                        right: 15px;
+                        top: 14px;
+                        bottom: 13px;
+                    };
+                }
+                span {
+                    font-size: 28px;
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        font-size: 15px;
+                        white-space: nowrap;
+                        padding: {
+                            top: 15px;
+                            left: 15px;
+                            right: 15px;
+                            bottom: 15px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .pricing-table {
+        table {
+            thead {
+                th {
+                    white-space: nowrap;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+                    span {
+                        font-size: 30px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        font-size: 15px;
+                        white-space: nowrap;
+                        padding: {
+                            top: 15px;
+                            bottom: 15px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1355px */
+@media only screen and (min-width: 1200px) and (max-width: 1355px) {}
+
+/* Min width 1356px to Max width 1535px */
+@media only screen and (min-width: 1356px) and (max-width: 1535px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

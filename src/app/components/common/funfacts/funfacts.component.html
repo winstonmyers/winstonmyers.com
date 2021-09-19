@@ -1,0 +1,17 @@
+<!-- Start Funfacts Area -->
+<div class="funfacts-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-md-3" *ngFor="let Funfacts of singleFunfacts;">
+                <div class="single-funfacts">
+                    <div class="icon">
+                        <i class="{{Funfacts.icon}}"></i>
+                    </div>
+                    <h3><span [countUp]="[(Funfacts.number)]">0</span><span class="sign">{{Funfacts.sign}}</span></h3>
+                    <p>{{Funfacts.subText}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Funfacts Area -->
