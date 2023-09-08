@@ -1,19 +1,13 @@
+SITEURL = 'http://localhost:8000'
+RELATIVE_URLS = True
 AUTHOR = 'winston myers'
 SITENAME = 'winston myers'
 SITETITLE = 'winston myers'
 SITESUBTITLE = 'nerd. dog lover. musician. technologist'
-SITEURL = 'http://localhost:8000'
-# SITEURL = 'https://winstonmyers.com'
 
 THEME_COLOR = 'dark'
-
-# Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
-
 PATH = 'content'
-
 TIMEZONE = 'America/Chicago'
-
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing

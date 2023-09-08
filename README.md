@@ -1,27 +1,27 @@
-# NaxaiNg
+# winstonmyers.com - documentation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+This is a repository for my personal website.  This project uses `python3.10`, [Pelican](https://github.com/getpelican/pelican), and an ever more customized version of the [Flex](https://github.com/alexandrevicenzi/Flex) theme.
 
-## Development server
+## development and testing
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The following command has been useful for running the local pelican server as well as re-deploying changes after each save and cleaning up any files on exit.
 
-## Code scaffolding
+``` shell
+$ pwd
+~/git/winstonmyers.com
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+nohup pelican --listen 2>&1 & pelican -r src/content -o output/ -t src/theme/ -D; make clean
+```
 
-## Build
+## theme changes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+I was having trouble with getthing the theme to include a paginated list of my blog posts on several pages. So minor changes were made to account for that as well as for showing social media more clearly.  
 
-## Running unit tests
+## configuration 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Most configuration changes are captured in the pelicanconf.py and publishconf.py. The goal is for page URIs to be automatically determined by location of the markdown file and it's slug.  
 
-## Running end-to-end tests
+## deployment
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+The Makefile is designed to run a series of GitHub Actions to install dependencies, build the static HTML, and deploy it to AWS S3. Later on, this could get more complicated as server-side projects are added.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
