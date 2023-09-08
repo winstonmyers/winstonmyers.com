@@ -5,7 +5,7 @@ THEME=$(BASEDIR)/theme/Flex
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
-OUTPUTDIR=$(BASEDIR)/../output
+OUTPUTDIR=../output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
@@ -30,11 +30,12 @@ ifneq ($(PORT), 0)
 endif
 
 dependencies:
-	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-	unzip awscliv2.zip
-	sudo ./aws/install
-	sudo apt-get python3.10
-	python -m pip install "pelican[markdown]"
+	@sudo apt-get unzip
+	@curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+	@unzip awscliv2.zip
+	@sudo ./aws/install
+	@sudo apt-get python3.10
+	@python -m pip install "pelican[markdown]"
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '
@@ -80,7 +81,7 @@ publish:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" -t "$(THEME)" $(PELICANOPTS)
 
 s3_upload: publish
-	aws s3 sync "$(OUTPUTDIR)"/ s3://$(S3_BUCKET) --acl public-read --delete
+	aws s3 sync "$(OUTPUTDIR)"/ s3://$(S3_BUCKET) --include '*' --acl public-read
 
 
 .PHONY: dependencies html help clean regenerate serve serve-global devserver publish s3_upload
